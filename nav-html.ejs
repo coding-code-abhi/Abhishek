@@ -1,0 +1,88 @@
+<div class="container nav-container">
+  <div class="logo">
+    <a href="/"
+      ><span class="first-letter">C</span>oder
+      <span class="first-letter" style="margin-left: 5px">A</span>bhi</a
+    >
+  </div>
+  <div class="link">
+    <div class="nav-link"><a href="/">Home </a></div>
+    <div class="nav-link"><a href="/contact">Contact </a></div>
+    <div class="nav-link"><a href="https://codingabhi.hashnode.dev/" target="_blank">Blogs </a></div>
+    <div class="theme nav-link">
+      <button
+        onclick="darkTheme()"
+        id="themeBtn"
+        style="
+          border: none;
+          cursor: pointer;
+          font-size: 20px;
+          background-color: transparent;
+        "
+      >
+        <i class="fa-regular fa-moon"></i>
+      </button>
+    </div>
+    <div class="line"></div>
+    <div class="social-media">
+      <div class="social-link none">
+        <a href="https://www.youtube.com/@coding_code_" target="_blank"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+      </div>
+      <div class="social-link none">
+        <a href="https://github.com/745590" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+      </div>
+      <div class="social-link none">
+        <a href="https://www.instagram.com/a_7ck_" target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+      <div class="social-link none">
+        <a href="https://twitter.com/AKCNMOTIVETION" target="_blank"
+          ><i class="fa-brands fa-x-twitter" ></i
+        ></a>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+const themeToggleBtn = document.getElementById("themeBtn");
+const navList = document.querySelectorAll(".nav-container");
+const links = document.querySelectorAll("a")
+const paras = document.querySelectorAll(".info")
+const theme = localStorage.getItem("theme");
+themeToggleBtn.addEventListener("click", () => {
+  navList.forEach(nav => {
+    if (nav.style.backgroundColor === "rgb(255, 255, 255)" || nav.style.backgroundColor === "") {
+      nav.style.backgroundColor = "#0E1630";
+    } else {
+      nav.style.backgroundColor = "#ffffff";
+    }
+  });
+  links.forEach(link => {
+    if (link.style.color === "rgb(161, 14, 253)") {
+      link.style.color = "rgb(3, 124, 90)";
+    } else {
+      link.style.color = "rgb(161, 14, 253)";
+    }
+  });
+  paras.forEach(para => {
+    if (para.style.color === "rgba(0, 0, 0, 0.628)") {
+      para.style.color = "rgb(25, 124, 90)";
+    } else {
+      para.style.color = "rgba(0, 0, 0, 0.628)";
+    }
+  });
+});
+if (theme === "dark") {
+  document.body.classList.add("dark");
+}
+themeToggleBtn.addEventListener("click", () => {
+  document.body.classList.themeToggleBtn("dark");
+  const newTheme = document.body.classList.contains("dark") ? "dark" : "light";
+  localStorage.setItem("theme", newTheme);
+});
+</script>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me</title>
+    <%- include('./style') %>
+    <link
+    rel="icon"
+    href="https://i.ibb.co/Hz6ptZS/img-modified.png"
+    type="image/png"
+  />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <style>
+        .contact{
+            display: flex; 
+            justify-content:center; 
+            align-items:center;
+            flex-wrap: wrap;
+            background-color: #F3F4F6;
+            width: 85%;
+            margin-left: 7.5%;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.438);
+        }
+        h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            font-size: 30px;
+            width: 100%;
+            margin-bottom: 30px;
+            padding-left: 10px;
+        }
+        img{
+            height:100px; 
+            width:100px ;
+             margin:0; 
+             padding:0;
+        }
+        #icons{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            background-color: #F3F4F6;
+            width: 85%;
+            margin-left: 7%;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.438);
+
+        }
+    </style>
+</head>
+<body>
+    <%- include('./nav-html') %> 
+    <div class="empty" style="height:120px ;"></div>
+
+    <div class="contact" >
+        <h2>Feel free to contact me!</h2>
+
+            <img src="https://i.ibb.co/Hz6ptZS/img-modified.png" alt="image" />
+
+    </div>
+    <div id="icons">
+        <div class="social-media" style="margin-top: 20px">
+            <div class="social-link" style="margin-right: 15px">
+              <a href="https://www.youtube.com/@coding_code_" target="_blank"
+                ><i class="fa-brands fa-youtube" class="i" style="font-size: 1.8rem; margin-left: 2% ; "></i
+              ></a>
+            </div>
+            <div class="social-link" style="margin-right: 15px">
+              <a href="https://github.com/745590" target="_blank"
+                ><i class="fa-brands fa-github" class="i" style="font-size: 1.8rem; margin-left: 2% ; "></i
+              ></a>
+            </div>
+            <div class="social-link" style="margin-right: 15px">
+              <a href="https://www.instagram.com/a_7ck_"
+                target="_blank"><i class="fa-brands fa-instagram" class="i" style=" margin-left: 2% ; font-size: 1.8rem;"></i
+              ></a>
+            </div>
+            <div class="social-link" style="margin-right: 15px">
+              <a href="https://twitter.com/AKCNMOTIVETION" target="_blank"
+                ><i class="fa-brands fa-x-twitter" class="i" style="font-size: 1.8rem; margin-left: 2%; "></i
+              ></a>
+            </div>
+          </div>
+    </div>
+    <footer>
+        <div class="footer">
+          <p class="footer-pera">© Copyright 2024 - Developed by Abhishek Kumar. All right reserved.</p>
+        </div>
+      </footer>
+</body>
+</html>
